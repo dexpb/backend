@@ -1,10 +1,12 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/server.js",
-    "start": "node src/server.js"
+    "vercel-build": "prisma generate && prisma migrate deploy && next build",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
@@ -12,9 +14,9 @@
   "description": "",
   "dependencies": {
     "@prisma/client": "^5.21.1",
+    "@vercel/node": "^3.2.24",
     "cors": "^2.8.5",
     "express": "^4.21.1",
-    "nodemon": "^3.1.7",
     "prisma": "^5.21.1"
   }
 }

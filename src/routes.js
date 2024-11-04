@@ -1,14 +1,7 @@
 const express = require("express");
 const routes = express.Router();
 const { PrismaClient } = require("@prisma/client");
-
 const prisma = new PrismaClient();
-
-if (process.env.NODE_ENV !== 'production') {
-  process.on('SIGINT', async () => {
-    await prisma.$disconnect();
-  });
-}
 
 // Create a new task
 routes.post("/tarefas", async (request, response) => {
