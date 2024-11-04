@@ -1,12 +1,11 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js",
     "start": "prisma generate && node src/server.js",
-    "postinstall": "prisma generate --force",
-    "build": "prisma generate && prisma migrate deploy"
+    "build": "prisma generate && npx prisma migrate deploy"
   },
   "engines": {
     "node": "18.x"
