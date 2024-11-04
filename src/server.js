@@ -1,14 +1,13 @@
-const express = require("express")
-const routes = require("./routes")
-const app = express()
-const cors =  require("cors")
+const express = require("express");
+const routes = require("./routes");
+const cors = require("cors");
+const app = express();
 
-app.use(cors())
-app.use(express.json())
-app.use(routes)
-app.get("/tarefas", (req, res) => {
-})
+app.use(cors());
+app.use(express.json());
+app.use("/api", routes);
 
-app.listen(3000, () => console.log("server up 3000"))
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Server running on port ${port}`));
 
-module.exports = app
+module.exports = app;
