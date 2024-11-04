@@ -11,7 +11,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = "postgresql://neondb_owner:G8tkXhuL3VsE@ep-damp-band-a5qx31tc.us-east-2.aws.neon.tech/neondb?sslmode=require"
 }
 
 model Tarefas {
