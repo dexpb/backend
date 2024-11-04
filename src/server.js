@@ -9,4 +9,6 @@ app.use(routes)
 app.get("/tarefas", (req, res) => {
 })
 
-app.listen(3333, () => console.log("server up 3333"))
+app.listen(3000, () => console.log("server up 3000"))
+
+module.exports = app
