@@ -5,8 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/server.js",
-    "start": "npx prisma generate && node src/server.js",
-    "build": "npx prisma generate && npx prisma migrate deploy"
+    "start": "prisma generate && node src/server.js",
+    "build": "prisma generate && prisma migrate deploy"
   },
   "keywords": [],
   "author": "",
