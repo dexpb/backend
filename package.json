@@ -3,12 +3,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx prisma generate && nodemon src/server.js",
-    "start": "npx prisma generate && node src/server.js",
-    "postinstall": "npx prisma generate",
-    "build": "npx prisma generate && npx prisma migrate deploy",
-    "prestart": "npx prisma generate"
+    "dev": "nodemon src/server.js",
+    "start": "prisma generate && node src/server.js",
+    "build": "prisma generate && npx prisma migrate deploy"
   },
   "engines": {
     "node": "18.x"
@@ -18,11 +15,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@prisma/client": "^5.22.0",
+    "@prisma/client": "^5.21.1",
     "@vercel/node": "^3.2.24",
     "cors": "^2.8.5",
     "express": "^4.21.1",
-    "nodemon": "2.0.0",
-    "prisma": "^5.22.0"
+    "prisma": "^5.21.1",
+    "nodemon": "2.0.0"
   }
 }
