@@ -1,6 +1,6 @@
 const express = require("express");
-import { PrismaClient } from './../prisma/generated/client/index.d';
 const routes = express.Router();
+const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 // Create a new task
