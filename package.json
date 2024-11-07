@@ -4,6 +4,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon src/server.js",
+    "prestart": "prism generate",
     "start": "prisma generate && node src/server.js",
     "build": "prisma generate && prisma migrate deploy"
   },
